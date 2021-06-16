@@ -8,7 +8,7 @@ Add contacts directly from your server to your smartphone
 
 **Server:** Node, Express
 
-**Client:** https://play.google.com/store/apps/details?id=com.kingaspx.contatoswhatsapp
+**Client:** https://play.google.com/store/apps/details?id=com.kingaspx.contactsplus
 
   
 ## Run Locally
@@ -59,14 +59,14 @@ Start the server
 #### CURL Example
 
 ```shell
-curl --request POST \
-  --url http://localhost:4747/api/contacts \
-  --header 'Content-Type: application/json' \
-  --data '{	
-	"contacts": [		
-		{"name": "Jhon Doe", "phone": "123456789"}
-	]
-}'
+curl -X POST --location "http://localhost:4747/api/contacts" \
+    -H "Content-Type: application/json" \
+    -H "app_id: "your_app_id"" \
+    -d "{
+        	\"contacts\": [
+        		{\"name\": \"Jhon Doe\", \"phone\": \"123456789\"}
+        	]
+        }"
 ```
 
   
